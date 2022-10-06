@@ -3,8 +3,10 @@ import React from 'react'
 
 const HomeScreen = () => {
   return (
-    <View>
-      <Text>HomeScreen</Text>
+    <View className="flex h-screen items-center justify-center">
+      <Text className="text-4xl text-black dark:text-white">
+        Home Screen
+      </Text>
     </View>
   )
 }
