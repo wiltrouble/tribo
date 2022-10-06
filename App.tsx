@@ -1,12 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import HomeScreen from './src/screens'
-import Component from './src/components'
-import Name1 from './src/screens/Name1'
+import HomeMapScreen from './src/screens/HomeMapScreen'
 
 const App = () => {
   return (
-    <Name1 />
+    <HomeMapScreen />
   )
 }
 
