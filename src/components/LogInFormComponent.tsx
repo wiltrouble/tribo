@@ -1,6 +1,5 @@
-// Formik x React Native example
 import React from 'react';
-import {Button, TextInput, View, Text} from 'react-native';
+import {TextInput, View, Text, TouchableHighlight} from 'react-native';
 import {Formik} from 'formik';
 import * as yup from 'yup';
 import {CheckIcon} from 'react-native-heroicons/solid';
@@ -34,7 +33,7 @@ const LogInFormComponent = () => (
             value={values.email}
             placeholder="email"
           />
-          {touched.email && !errors.email ? <CheckIcon color="green" /> : null }
+          {touched.email && !errors.email ? <CheckIcon color="green" /> : null}
         </View>
         {touched.password && errors.email && (
           <Text style={{fontSize: 10, color: 'red'}}>{errors.email}</Text>
@@ -48,13 +47,26 @@ const LogInFormComponent = () => (
             value={values.password}
             placeholder="password"
           />
-          {touched.password && !errors.password ? <CheckIcon color="green" /> : null}
+          {touched.password && !errors.password ? (
+            <CheckIcon color="green" />
+          ) : null}
         </View>
         {touched.password && errors.password && (
           <Text style={{fontSize: 10, color: 'red'}}>{errors.password}</Text>
         )}
 
-        <Button onPress={handleSubmit} title="Submit" />
+        <Text className="py-10">Did you forget your password?</Text>
+
+        <TouchableHighlight onPress={handleSubmit} className="bg-blue-400 w-4/5 h-10 rounded-lg justify-center items-center">
+          <Text className="text-white font-bold">Enter your account</Text>
+        </TouchableHighlight>
+
+        <Text className='py-10'>Don't have a Tribo account yet?</Text>
+
+        <TouchableHighlight onPress={handleSubmit} className="w-4/5 h-10 rounded-lg justify-center items-center border-blue-400 border-2">
+          <Text className="text-blue-400 font-bold">Enter your account</Text>
+        </TouchableHighlight>
+
       </View>
     )}
   </Formik>

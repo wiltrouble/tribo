@@ -24,7 +24,7 @@ const LogInScreen = () => {
         </TouchableOpacity>
       </View>
 
-      <Text className=''>o ingresa con tu correo electronico</Text>
+      <Text className=' py-10'>o ingresa con tu correo electronico</Text>
 
       <LogInFormComponent />
       

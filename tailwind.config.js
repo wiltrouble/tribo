@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         facebook: '#3B5998',
-        appBg: 'F4F5FA'
+        appBg: '#F4F5FA',
+        customButton: '#2D9CDB',
       }
     },
   },
