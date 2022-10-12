@@ -13,7 +13,7 @@ const TopBarComponent = () => {
         className="w-12 h-12 rounded-full ml-5"
       />
 
-      <View className='flex-row border rounded-lg justify-center items-center mx-5 px-2'>
+      <View className='flex-row border rounded-lg justify-center items-center mx-5 px-2 bg-orange-300'>
         <MagnifyingGlassIcon color='black'/>
         <TextInput placeholder='Col. Atlas, Colima' className='w-40 mx-2' placeholderTextColor='black'/>
         <AdjustmentsHorizontalIcon color='black' />
