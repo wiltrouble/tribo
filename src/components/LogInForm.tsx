@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, TextInput, View, Text} from 'react-native';
 import {Formik, useFormik} from 'formik';
+import TextInputComponent from './LogInFormComponent';
 
 const validate = values => {
   const errors = {name:'', lastName:''}
@@ -15,13 +16,10 @@ const validate = values => {
   } else if (values.lastName.length < 5) {
     errors.lastName = 'Name is short'
   }
-
-
-
   return errors;
 }
 
-const TextInputComponent = () => {
+const LogInForm = () => {
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -29,8 +27,10 @@ const TextInputComponent = () => {
       email: '',
     },
     validate,
-    onSubmit: values => console.log(values),
+    onSubmit: () => console.log('pressed')
   });
+
+  
 
   return (
         <View className="w-full justify-center items-center">
@@ -41,8 +41,8 @@ const TextInputComponent = () => {
             value={formik.values.name}
             placeholder="name"
           />
-          {/* <Text>Requerido!!!</Text> */}
           {formik.touched.name && formik.errors.name ? <Text>{formik.errors.name}</Text> : null}
+
           <TextInput
             className="bg-white w-4/5 my-2 h-10 rounded-lg px-3"
             onChangeText={formik.handleChange('lastName')}
@@ -62,10 +62,12 @@ const TextInputComponent = () => {
           />
           {formik.touched.email && formik.errors.email ? <Text>{formik.errors.lastName}</Text> : null}
 
+          <TextInputComponent label='Password' formik={formik}/>
+
 
           <Button onPress={formik.handleSubmit} title="Submit" />
         </View>
   );
 };
 
-export default TextInputComponent;
+export default LogInForm;

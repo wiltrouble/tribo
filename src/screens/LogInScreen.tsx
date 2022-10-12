@@ -1,8 +1,6 @@
 import {View, Text, TouchableOpacity, Image, TextInput} from 'react-native';
 import React from 'react';
-import TextInputComponent from '../components/TextInputComponent';
-import Formik from '../components/Formik';
-import FormikComponent from '../components/Formik';
+import LogInFormComponent from '../components/LogInFormComponent';
 
 
 const LogInScreen = () => {
@@ -28,7 +26,7 @@ const LogInScreen = () => {
 
       <Text className=''>o ingresa con tu correo electronico</Text>
 
-      <TextInputComponent />
+      <LogInFormComponent />
       
     </View>
   );

@@ -28,11 +28,11 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name='Home' component={HomeScreen}/>
+        <Tab.Screen name='Home' component={LogInScreen}/>
         <Tab.Screen name='SplasScreen' component={SplasScreen}/>
         <Tab.Screen name='Settings2' component={SettingsScreen}/>
         <Tab.Screen name='Settings3' component={SettingsScreen}/>
-        <Tab.Screen name='LogIn' component={LogInScreen}/>
+        <Tab.Screen name='LogIn' component={HomeScreen}/>
       </Tab.Navigator>
     </NavigationContainer>
   )
